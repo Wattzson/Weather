@@ -1,6 +1,6 @@
 //////////////////////////////
-// NPM Third Party Modules //
-////////////////////////////
+// NPM THIRD PARTY MODULES //
+//////////////////////////////
 
 const express = require('express');
 const hbs = require('hbs');
@@ -8,7 +8,10 @@ const bodyParser = require('body-parser'); // required to read express's request
 const axios = require('axios'); // promise based http requests https://www.npmjs.com/package/axios
 
 
-// GENERAL SETUP
+///////////////////
+// GENERAL SETUP //
+///////////////////
+
 var app = express();
 const port = '8081';
 
@@ -20,7 +23,10 @@ hbs.registerHelper('getCurrentYear', () => {
 });
 
 
-// MIDDLEWARE
+/////////////////
+// MIDDLEWARE //
+////////////////
+
 app.set('view engine', 'hbs');
 //pings console each time user agent contacts server
 app.use((req, res, next) => {
@@ -33,7 +39,10 @@ app.use((req, res, next) => {
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
-// ROUTING
+//////////////
+// ROUTING //
+/////////////
+
 app.get('/', (req, res) => {
     res.render('pages/index.hbs');
   });
