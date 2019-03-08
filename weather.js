@@ -60,9 +60,11 @@ app.post('/', (req, res) => {
     var weatherUrl = `https://api.darksky.net/forecast/${ darkskyAPI }/${ lat },${ lng }`;
     const data = await axios.get(weatherUrl);
     var temp = Math.round(data.data.currently.temperature);
+    var apparentTemp = Math.round(data.data.currently.apparentTemperature);
     console.log(temp);
     res.render('pages/results.hbs', {
       formattedAddress,
+      apparentTemp,
       temp
     })
   }

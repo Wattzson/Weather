@@ -7,8 +7,8 @@
   <body>
     <div class="page">
         <div class="weather-card">
-            <p>{{ formattedAddress }}</p>
-            <p>{{ temp }}</p>
+            <p>You searched for <span>{{ formattedAddress }}</span>.</p>
+            <p>The current temperature is <span>{{ temp }}</span>, it feels like <span>{{ apparentTemp }}</span>.</p>
         </div>
         <div class="lookup">
             <form action="/" method="POST">
