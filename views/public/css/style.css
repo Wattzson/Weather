@@ -1,14 +1,18 @@
 /*---------------------*/
 /* THIRD PARTY IMPORTS */
 /*---------------------*/
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|PT+Sans+Narrow');
+/* font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'PT Sans Narrow', sans-serif; */
 
 
 /*-----------*/
 /* VARIABLES */
 /*-----------*/
 :root {
-    --yellow: yellow;
+    --yellow: #FBDCA6;
+    --primary: 'Open Sans Condensed', sans-serif;
+    --secondary: 'PT Sans Narrow', sans-serif;
 }
 
 /*----------------*/
@@ -33,5 +37,21 @@ html, body {
 /* MOBILE LAYOUT */
 /*---------------*/
 .page {
-    background-image: url("../imgs/weather-bg.jpg");
+    background-image: url("weather-bg.jpg");
+    height: 100vh;
+    display: grid;
+}
+
+.weather-card {
+    background-color: rgba(255,255,255,.7);
+    font-family: var(--primary);
+    color: var(--yellow);
+    display: grid;
+    align-content: center;
+    font-size: 1.25rem;
+}
+
+.lookup {
+    align-self: center;
+    justify-self: center;
 }

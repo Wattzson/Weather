@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> metas }}
+    <title>Results</title>
+  </head>
+  <body>
+    <div class="page">
+        <div class="weather-card">
+            <p>{{ formattedAddress }}</p>
+            <p>{{ temp }}</p>
+        </div>
+        <div class="lookup">
+            <form action="/" method="POST">
+                <label>
+                    <input class="address-input" type="text" name="lookupAddress" placeholder="Enter an Address" autocomplete="no">
+                    <input class="weather-submit" type="submit" value="Submit">
+                </label>
+            </form>
+        </div>
+    </div>
+  </body>
+</html>

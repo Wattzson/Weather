@@ -1,7 +1,7 @@
 //////////////////////////////
 // NPM THIRD PARTY MODULES //
 //////////////////////////////
-
+require('dotenv').config() //require('dotenv/config') // stores env variables
 const express = require('express');
 const hbs = require('hbs');
 const bodyParser = require('body-parser'); // required to read express's request object https://www.npmjs.com/package/body-parser
@@ -47,6 +47,34 @@ app.get('/', (req, res) => {
     res.render('pages/index.hbs');
   });
 
+app.post('/', (req, res) => {
+  var encodedAddress = encodeURIComponent(req.body.lookupAddress)
+  var googleAPI = process.env.GOOGLEAPIKEY;
+  var darkskyAPI = process.env.DARKSKYAPI;
+  var geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${ encodedAddress }&key=${ googleAPI }`
+  async function geoData() {
+    const geo = await axios.get(geocodeUrl)
+    var formattedAddress = geo.data.results[0].formatted_address
+    var lat = geo.data.results[0].geometry.location.lat;
+    var lng = geo.data.results[0].geometry.location.lng;
+    var weatherUrl = `https://api.darksky.net/forecast/${ darkskyAPI }/${ lat },${ lng }`;
+    const data = await axios.get(weatherUrl);
+    var temp = Math.round(data.data.currently.temperature);
+    console.log(temp);
+    res.render('pages/results.hbs', {
+      formattedAddress,
+      temp
+    })
+  }
+  geoData().catch(() => {
+    console.log('Error')
+    // res.render('pages/error.hbs', {
+    //   errorMessage: "Error fetching request.  Please try again."
+    // })
+  })
+})
+
 
 app.listen(port);
+console.log(process.env);
 console.log(`Server started on port ${ port }`)
