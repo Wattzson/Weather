@@ -40,22 +40,41 @@ html, body {
     background-image: url("weather-bg.jpg");
     height: 100vh;
     display: grid;
+    grid-template-rows: 3fr 1fr;
 }
 
 .weather-card {
     background-color: rgba(0,0,0,.6);
+    display: grid;
+    align-items: center;
+    align-content: center;
+    margin-top: 1rem;
+    justify-content: space-evenly;
+}
+.weather-card h1 {
+    margin: 0 1rem 1rem 1rem;
+    padding: 0 .25rem;
+    font-size: 1.15rem;
     font-family: var(--primary);
     color: var(--yellow);
-    display: grid;
-    align-content: center;
-    align-self: center;
-    justify-items: center;
-    height: 90%;
-    font-size: 1.25rem;
+    justify-self: end;
+    border-bottom: 2px solid rgba(255,255,255,.3);
+    border-right: 2px solid rgba(255,255,255,.3);
+    border-radius: 15px;
 }
-.weather-card span {
-    font-weight: 600;
+.weather-card h2 {
+    margin: 0 1rem 1rem 1rem;
+    padding: 0 .25rem;
+    font-size: .95rem;
+    font-family: var(--secondary);
+    color: lightgray;
+    text-transform: capitalize;
+    border-bottom: 2px solid rgba(255,255,255,.3);
+    border-left: 2px solid rgba(255,255,255,.3);
+    justify-self: start;
+    border-radius: 15px;
 }
+
 
 .lookup {
     align-self: center;

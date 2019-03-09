@@ -61,8 +61,13 @@ app.post('/', (req, res) => {
     const data = await axios.get(weatherUrl);
     var temp = Math.round(data.data.currently.temperature);
     var apparentTemp = Math.round(data.data.currently.apparentTemperature);
-    console.log(temp);
+    var summary = data.data.currently.summary;
+    var hourlySummary = data.data.hourly.summary;
+    var dailySummary = data.data.daily.summary;
     res.render('pages/results.hbs', {
+      summary,
+      hourlySummary,
+      dailySummary,
       formattedAddress,
       apparentTemp,
       temp
@@ -78,5 +83,4 @@ app.post('/', (req, res) => {
 
 
 app.listen(port);
-console.log(process.env);
 console.log(`Server started on port ${ port }`)

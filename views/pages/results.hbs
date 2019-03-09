@@ -7,8 +7,16 @@
   <body>
     <div class="page">
         <div class="weather-card">
-            <p>You searched for <span>{{ formattedAddress }}</span>.</p>
-            <p>The current temperature is <span>{{ temp }}</span>, it feels like <span>{{ apparentTemp }}</span>.</p>
+            <h2>You searched for </h2>
+            <h1>{{ formattedAddress }}</h1>
+            <h2>The current temperature is </h2>
+            <h1>{{ temp }}&#8457;</h1>
+            <h2>it feels like</h2>
+            <h1>{{ apparentTemp }}&#8457;</h1>
+            <h2>Today you can expect</h2>
+            <h1>{{ hourlySummary }}</h1>
+            <h2>This week you can expect</h2>
+            <h1>{{ dailySummary }}</h1>
         </div>
         <div class="lookup">
             <form action="/" method="POST">
