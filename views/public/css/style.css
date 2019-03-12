@@ -31,6 +31,12 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-size: 1rem;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
 }
 
 /*---------------*/
@@ -38,9 +44,13 @@ html, body {
 /*---------------*/
 .page {
     background-image: url("weather-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
     display: grid;
-    grid-template-rows: 3fr 1fr;
+}
+.page-results {
+    grid-template-rows: 1fr auto;
 }
 
 .weather-card {
@@ -48,24 +58,23 @@ html, body {
     display: grid;
     align-items: center;
     align-content: center;
-    margin-top: 1rem;
     justify-content: space-evenly;
+    grid-gap: 1rem
 }
 .weather-card h1 {
-    margin: 0 1rem 1rem 1rem;
-    padding: 0 .25rem;
-    font-size: 1.15rem;
+    font-size: 1.45rem;
     font-family: var(--primary);
     color: var(--yellow);
     justify-self: end;
     border-bottom: 2px solid rgba(255,255,255,.3);
     border-right: 2px solid rgba(255,255,255,.3);
     border-radius: 15px;
+    max-width: 70%;
+    margin-right: 1rem;
+    padding-right: .20rem;
 }
 .weather-card h2 {
-    margin: 0 1rem 1rem 1rem;
-    padding: 0 .25rem;
-    font-size: .95rem;
+    font-size: 1.15rem;
     font-family: var(--secondary);
     color: lightgray;
     text-transform: capitalize;
@@ -73,10 +82,36 @@ html, body {
     border-left: 2px solid rgba(255,255,255,.3);
     justify-self: start;
     border-radius: 15px;
+    margin-left: 1rem;
+    padding-left: .20rem;
 }
-
 
 .lookup {
     align-self: center;
     justify-self: center;
+    margin: 1rem 0;
+}
+
+/*---------------*/
+/* MEDIA QUERIES */
+/*---------------*/
+@media (max-width:340px) {
+    html {
+        font-size: .85rem;
+    }
+}
+@media (min-width:500px) {
+    html {
+        font-size: 1.25rem;
+    }
+}
+@media (min-width:700px) {
+    html {
+        font-size: 1.45rem;
+    }
+}
+@media (min-width:1600px) {
+    html {
+        font-size: 1.7rem;
+    }
 }

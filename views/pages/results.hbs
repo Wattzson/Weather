@@ -5,7 +5,7 @@
     <title>Results</title>
   </head>
   <body>
-    <div class="page">
+    <div class="page page-results">
         <div class="weather-card">
             <h2>You searched for </h2>
             <h1>{{ formattedAddress }}</h1>
@@ -19,9 +19,9 @@
             <h1>{{ dailySummary }}</h1>
         </div>
         <div class="lookup">
-            <form action="/" method="POST">
+            <form class="address-input" action="/" method="POST">
                 <label>
-                    <input class="address-input" type="text" name="lookupAddress" placeholder="Enter an Address" autocomplete="no">
+                    <input type="text" name="lookupAddress" placeholder="Enter an Address" autocomplete="no">
                     <input class="weather-submit" type="submit" value="Submit">
                 </label>
             </form>
