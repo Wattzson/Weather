@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{> metas }}
+
+
+        <title>Weather - Error</title>
+    </head>
+    <body>
+        <div class="page">
+            <div class="error">
+                <h1>{{ errorMessage }}</h1>
+            </div>
+            <div class="lookup">
+                <form class="address-input" action="/" method="POST">
+                    <label>
+                        <input type="text" name="lookupAddress" placeholder="Enter an Address" autocomplete="no" autofocus="no">
+                        <input class="weather-submit" type="submit" value="Submit">
+                    </label>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

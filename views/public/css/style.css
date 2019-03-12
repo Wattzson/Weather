@@ -2,6 +2,7 @@
 /* THIRD PARTY IMPORTS */
 /*---------------------*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|PT+Sans+Narrow');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
 /* font-family: 'Open Sans Condensed', sans-serif;
 font-family: 'PT Sans Narrow', sans-serif; */
 
@@ -13,6 +14,8 @@ font-family: 'PT Sans Narrow', sans-serif; */
     --yellow: #FBDCA6;
     --primary: 'Open Sans Condensed', sans-serif;
     --secondary: 'PT Sans Narrow', sans-serif;
+    --raleway: 'Raleway', sans-serif;
+    --blue: #5950FC;
 }
 
 /*----------------*/
@@ -53,13 +56,21 @@ h1, h2 {
     grid-template-rows: 1fr auto;
 }
 
+.address-input input {
+    font-size: 1.25rem;
+    text-align: center;
+    font-family: var(--raleway);
+    border-radius: 15px;
+}
+
 .weather-card {
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.9);
     display: grid;
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
-    grid-gap: 1rem
+    grid-gap: 1rem;
+    border-radius: 15px;
 }
 .weather-card h1 {
     font-size: 1.45rem;
@@ -72,10 +83,12 @@ h1, h2 {
     max-width: 70%;
     margin-right: 1rem;
     padding-right: .20rem;
+    text-align: right;
 }
 .weather-card h2 {
     font-size: 1.15rem;
     font-family: var(--secondary);
+    font-weight: 400;
     color: lightgray;
     text-transform: capitalize;
     border-bottom: 2px solid rgba(255,255,255,.3);
@@ -85,11 +98,35 @@ h1, h2 {
     margin-left: 1rem;
     padding-left: .20rem;
 }
+.weather-lookup {
+    border-radius: 15px;
+}
+
+.weather-submit {
+    padding: 0 1rem;
+}
 
 .lookup {
     align-self: center;
     justify-self: center;
     margin: 1rem 0;
+}
+
+.error {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 15px;
+}
+
+.error h1{
+    text-transform: uppercase;
+    padding: .75rem;
+    font-family: var(--raleway);
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--yellow);
 }
 
 /*---------------*/

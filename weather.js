@@ -75,9 +75,9 @@ app.post('/', (req, res) => {
   }
   geoData().catch(() => {
     console.log('Error')
-    // res.render('pages/error.hbs', {
-    //   errorMessage: "Error fetching request.  Please try again."
-    // })
+    res.render('pages/error.hbs', {
+      errorMessage: "Error fetching request.  Please try again."
+    })
   })
 })
 
