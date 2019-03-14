@@ -28,6 +28,7 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
+    transition-duration: 0.4s;
 }
 
 html, body {
@@ -52,19 +53,30 @@ h1, h2 {
     height: 100vh;
     display: grid;
 }
-.page-results {
-    grid-template-rows: 1fr auto;
+
+.address-input {
+    display: grid;
+    justify-items: center;
 }
 
 .address-input input {
+    width: 70%;
     font-size: 1.25rem;
     text-align: center;
     font-family: var(--raleway);
+    color: var(--yellow);
     border-radius: 15px;
+    transition: width 0.5s ease-in-out;
+    background-color: rgba(0,0,0,.9);
+    border: 0;
+    padding: .3rem;
+}
+.address-input input:focus {
+    width: 100%;
 }
 
 .weather-card {
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0,0,0,.7);
     display: grid;
     align-items: center;
     align-content: center;
@@ -104,19 +116,36 @@ h1, h2 {
 
 .weather-submit {
     padding: 0 1rem;
+    margin: 1rem;
+    font-family: var(--primary);
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 15px;
+    color: var(--yellow);
+    border: 0;
+    background-color: rgba(0,0,0,.9);
+}
+.weather-submit:active {
+    background-color: rgba(255,255,255,.9);
+    color: black;
 }
 
 .lookup {
     align-self: center;
     justify-self: center;
-    margin: 1rem 0;
+    width: 90%;
+}
+
+.lookup-results {
+    margin: 2rem 1rem 1rem 1rem;
 }
 
 .error {
     display: grid;
     justify-self: center;
     align-self: center;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.7);
     border-radius: 15px;
 }
 
@@ -124,9 +153,9 @@ h1, h2 {
     text-transform: uppercase;
     padding: .75rem;
     font-family: var(--raleway);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2rem;
-    color: var(--yellow);
+    color: #c70700;
 }
 
 /*---------------*/
@@ -141,10 +170,35 @@ h1, h2 {
     html {
         font-size: 1.25rem;
     }
+    .address-input input {
+        width: 60%;
+    }
 }
 @media (min-width:700px) {
     html {
         font-size: 1.45rem;
+    }
+    .address-input input {
+        width: 50%;
+    }
+    .address-input input:focus {
+        width: 80%;
+    }
+}
+@media (min-width:1100px) {
+    .address-input input {
+        width: 45%;
+    }
+    .address-input input:focus {
+        width: 70%;
+    }
+}
+@media (min-width:1400px) {
+    .address-input input {
+        width: 35%;
+    }
+    .address-input input:focus {
+        width: 50%;
     }
 }
 @media (min-width:1600px) {
