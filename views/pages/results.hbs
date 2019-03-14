@@ -7,14 +7,14 @@
   <body>
     <div class="page page-results">
         <div class="weather-card">
-            <h2>You searched for: </h2>
-            <h1>{{ formattedAddress }}</h1>
-            <h2>The current temperature is: </h2>
-            <h1>{{ temp }}&#8457;</h1>
-            <h2>Today you can expect: </h2>
-            <h1>{{ hourlySummary }}</h1>
-            <h2>This week you can expect: </h2>
-            <h1>{{ dailySummary }}</h1>
+            <p>You searched for: </p>
+            <p>{{ formattedAddress }}</p>
+            <p>The current temperature is: </p>
+            <p>{{ temp }}&#8457;</p>
+            <p>Today you can expect: </p>
+            <p>{{ hourlySummary }}</p>
+            <p>This week you can expect: </p>
+            <p>{{ dailySummary }}</p>
             <div class="lookup lookup-results">
               <form class="address-input" action="/" method="POST">
                 <input type="text" name="lookupAddress" placeholder="Enter an Address" autocomplete="no" autofocus="no">
