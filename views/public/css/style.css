@@ -15,7 +15,6 @@ font-family: 'PT Sans Narrow', sans-serif; */
     --primary: 'Open Sans Condensed', sans-serif;
     --secondary: 'PT Sans Narrow', sans-serif;
     --raleway: 'Raleway', sans-serif;
-    --blue: #5950FC;
 }
 
 /*----------------*/
@@ -28,16 +27,17 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
-    transition-duration: 0.4s;
 }
 
+/* --------------------------- */
+/* SITE-WIDE ELEMENTAL CHANGES */
+/* --------------------------- */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     font-size: 1rem;
 }
-
 h1, p {
     margin: 0;
     padding: 0;
@@ -54,11 +54,11 @@ h1, p {
     display: grid;
 }
 
+
 .address-input {
     display: grid;
     justify-items: center;
 }
-
 .address-input input {
     width: 70%;
     font-size: 1.25rem;
@@ -113,7 +113,6 @@ p:nth-of-type(odd) {
 .weather-lookup {
     border-radius: 15px;
 }
-
 .weather-submit {
     padding: 0 1rem;
     margin: 1rem;
@@ -137,7 +136,6 @@ p:nth-of-type(odd) {
     justify-self: center;
     width: 90%;
 }
-
 .lookup-results {
     margin: 2rem 1rem 1rem 1rem;
 }
@@ -149,7 +147,6 @@ p:nth-of-type(odd) {
     background-color: rgba(0,0,0,.7);
     border-radius: 15px;
 }
-
 .error h1{
     text-transform: uppercase;
     padding: .75rem;
