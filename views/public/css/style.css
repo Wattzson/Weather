@@ -35,7 +35,6 @@ html {
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
     font-size: 1rem;
 }
 h1, p {
@@ -50,8 +49,9 @@ h1, p {
     background-image: url("weather-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
     display: grid;
+    height: 100vh;
+    overflow: scroll;
 }
 
 
@@ -81,8 +81,11 @@ h1, p {
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
-    grid-gap: 1rem;
+    grid-gap: .75rem;
     border-radius: 15px;
+}
+.weather-card:first-child {
+    margin-top: .75rem;
 }
 p:nth-of-type(even) {
     font-size: 1.45rem;
