@@ -46,7 +46,7 @@ h1, p {
 /* MOBILE LAYOUT */
 /*---------------*/
 .page {
-    background-image: url("weather-bg.jpg");
+    background-image: url("weather-bg_iqkogy_c_scale,w_300.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     display: grid;
@@ -60,7 +60,7 @@ h1, p {
     justify-items: center;
 }
 .address-input input {
-    width: 70%;
+    width: 70vw;
     font-size: 1.25rem;
     text-align: center;
     font-family: var(--raleway);
@@ -72,7 +72,7 @@ h1, p {
     padding: .3rem;
 }
 .address-input input:focus {
-    width: 100%;
+    width: 90vw;
 }
 
 .weather-card {
@@ -162,9 +162,19 @@ p:nth-of-type(odd) {
 /*---------------*/
 /* MEDIA QUERIES */
 /*---------------*/
+@media (max-width:300px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_300.jpg")
+    }
+}
 @media (max-width:340px) {
     html {
         font-size: .85rem;
+    }
+}
+@media (max-width:477px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_477.jpg")
     }
 }
 @media (min-width:500px) {
@@ -172,7 +182,12 @@ p:nth-of-type(odd) {
         font-size: 1.25rem;
     }
     .address-input input {
-        width: 60%;
+        width: 60vw;
+    }
+}
+@media (max-width:613px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_613.jpg")
     }
 }
 @media (min-width:700px) {
@@ -180,30 +195,198 @@ p:nth-of-type(odd) {
         font-size: 1.45rem;
     }
     .address-input input {
-        width: 50%;
+        width: 50vw;
     }
     .address-input input:focus {
-        width: 80%;
+        width: 80vw;
+    }
+}
+@media (max-width:728px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_728.jpg")
+    }
+}
+@media (max-width:845px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_845.jpg")
+    }
+}
+@media (max-width:936px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_936.jpg")
+    }
+}
+@media (max-width:1018px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1018.jpg")
+    }
+}
+@media (max-width:1092px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1092.jpg")
     }
 }
 @media (min-width:1100px) {
     .address-input input {
-        width: 45%;
+        width: 45vw;
     }
     .address-input input:focus {
-        width: 70%;
+        width: 70vw;
+    }
+}
+@media (max-width:1169px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1169.jpg")
+    }
+}
+@media (max-width:1236px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1236.jpg")
+    }
+}
+@media (max-width:1303px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1303.jpg")
+    }
+}
+@media (max-width:1365px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1365.jpg")
     }
 }
 @media (min-width:1400px) {
     .address-input input {
-        width: 35%;
+        width: 35vw;
     }
     .address-input input:focus {
-        width: 50%;
+        width: 50vw;
     }
 }
+@media (max-width:1421px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1421.jpg")
+    }
+}
+@media (max-width:1470px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1470.jpg")
+    }
+}
+@media (max-width:1530px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1530.jpg")
+    }
+}
+@media (max-width:1584px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1584.jpg")
+    }
+}
+
 @media (min-width:1600px) {
     html {
         font-size: 1.7rem;
+    }
+    .address-input input {
+        width: 25vw;
+    }
+    .address-input input:focus {
+        width: 50vw;
+    }
+}
+@media (max-width:1633px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1633.jpg")
+    }
+}
+@media (max-width:1683px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1683.jpg")
+    }
+}
+@media (max-width:1728px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1728.jpg")
+    }
+}
+@media (max-width:1773px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1773.jpg")
+    }
+}
+@media (max-width:1821px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1821.jpg")
+    }
+}
+@media (max-width:1866px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1866.jpg")
+    }
+}
+@media (max-width:1905px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1905.jpg")
+    }
+}
+@media (max-width:1945px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1945.jpg")
+    }
+}
+@media (max-width:1898px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_1898.jpg")
+    }
+}
+@media (max-width:2026px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_2026.jpg")
+    }
+}
+@media (max-width:2064px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_2064.jpg")
+    }
+}
+@media (min-width:2100px) {
+    .address-input input {
+        width: 20vw;
+    }
+    .address-input input:focus {
+        width: 40vw;
+    }
+}
+@media (max-width:2104px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_2104.jpg")
+    }
+}
+@media (max-width:2142px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_2142.jpg")
+    }
+}
+@media (max-width:2178px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_2178.jpg")
+    }
+}
+@media (max-width:2197px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_2197.jpg")
+    }
+}
+@media (max-width:2200px) {
+    .page {
+        background-image: url("weather-bg_iqkogy_c_scale,w_2200.jpg")
+    }
+}
+@media (min-width:2500px) {
+    .address-input input {
+        width: 15vw;
+    }
+    .address-input input:focus {
+        width: 30vw;
     }
 }
