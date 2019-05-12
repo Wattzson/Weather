@@ -1,7 +1,7 @@
 //////////////////////////////
 // NPM THIRD PARTY MODULES //
 //////////////////////////////
-require('dotenv').config() // stores env variables
+require('dotenv').config() // stores env variables https://www.npmjs.com/package/dotenv
 const express = require('express');
 const hbs = require('hbs'); // handlebars
 const bodyParser = require('body-parser'); // required to read express's request object https://www.npmjs.com/package/body-parser
